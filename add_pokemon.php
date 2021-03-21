@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
+    <?php include('includes/header.php') ?>
+
 <style>
 
     body{
@@ -14,7 +16,12 @@
     .add_pokemon{
         margin-left: 461px;
         margin-right: 461px;
-        margin-top: 200px ;
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+
+    p{
+        font-size: 20px;
     }
 
     h1{
@@ -23,10 +30,10 @@
     }
 
     .nom,.pv, .attaque, .défense, .vitesse, .ajouter {
-        border-radius: 5px;
+        border-radius: 4px;
         border: 1px solid;
         border-color: grey;
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .file{
@@ -39,16 +46,16 @@
     .nom, .pv, .attaque, .défense, .vitesse {
         display: inline-block;
         width: 100%;
-        padding: 12px;
+        padding: 16px;
         margin-bottom: 10px;
     }
     .ajouter{
         border: hidden;
         color: white;
         width: 103%;
-        padding: 12px;
-        background-color: #4DAE50;
-        font-size: 16px;
+        padding: 16px;
+        background-color: #4CAF50;
+        font-size: 20px;
     }
 
     .ajouter:hover{
@@ -71,4 +78,7 @@
     </form>
 </div>
 </body>
+
+<?php include('includes/footer.php') ?>
+
 </html>

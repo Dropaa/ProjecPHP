@@ -1,5 +1,7 @@
 <style>
 	.footer{
+    position: fixed;
+    bottom: 0;
 	text-align: center;	
 	background-color:  #AAA;
 	color: #FFF;
@@ -7,8 +9,9 @@
 	font-size: 18px;
 	}
 	.footer p{
-		position: relative;
-		top: 27px;
+    position: relative;
+    text-align: center;
+    width: 1920px;
 	}
 	body{
 		margin : auto;
