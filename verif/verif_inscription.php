@@ -1,6 +1,6 @@
 <?php
 
-if (!isset($_POST['nickname']) || empty($_POST['email']) || !isset($_POST['email']) || empty($_POST['email'])
+if (!isset($_POST['nickname']) || empty($_POST['nickname']) || !isset($_POST['email']) || empty($_POST['email'])
     || !isset($_POST['password']) || empty($_POST['password'])) {
     header('location: ../connexion.php?message=Veuillez remplir tous les champs.');
     exit;
