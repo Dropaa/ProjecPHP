@@ -20,7 +20,7 @@
         margin-bottom: 100px;
     }
 
-    p{
+    .file{
         font-size: 20px;
     }
 

@@ -6,10 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
-<header>
-    <?php include('includes/header.php')
-    ?>
-</header>
+    <?php include('includes/header.php') ?>
 
 <style>
 
@@ -59,7 +56,7 @@
         padding-left: 10px;
     }
 
-    p{
+    .fileInscription{
         margin: 0;
     }
 
@@ -75,6 +72,7 @@
         margin-right: 1%;
         height: 55%;
         padding: 8px;
+        padding-bottom: 20px;
     }
 
     .inscription{
@@ -84,6 +82,7 @@
         width: 49%;
         margin-left: 1%;
         padding: 8px;
+        padding-bottom: 20px;
 
     }
 
