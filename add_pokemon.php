@@ -77,7 +77,7 @@
         <input type="text" name="attack" placeholder="Attaque" class="attaque" required>
         <input type="text" name="defense" placeholder="Défense" class="défense" required>
         <input type="text" name="speed" placeholder="Vitesse" class="vitesse" required>
-        <p class="img"><strong>Image :</strong><input type="file" accept="image/png" class="file" required></p>
+        <p class="img"><strong>Image :</strong><input type="file" accept="image/png,image/jpeg,image/gif" class="file" required></p>
         <input type="submit" value="Ajouter" class="ajouter">
     </form>
 </div>

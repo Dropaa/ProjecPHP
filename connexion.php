@@ -116,7 +116,7 @@
                 <input type="text" name="nickname" placeholder="Pseudo" class="nicknameInscription" required>
                 <input type="email" name="email" placeholder="E-mail" class="emailInscription" required>
                 <input type="password" name="password" placeholder="Mot de passe" class="passwordInscription" required>
-                <p class="profilImg"><strong>Image de profil :</strong> <input type="file" accept="image/png" class="fileInscription" required></p>
+                <p class="profilImg"><strong>Image de profil :</strong> <input type="file" accept="image/png,image/jpeg,image/gif" name="image" class="fileInscription" required></p>
                 <input type="submit" value="Inscription" class="boutonInscription">
 
             </form>
