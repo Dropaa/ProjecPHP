@@ -10,8 +10,8 @@
 	}
 	.footer p{
     position: relative;
-    text-align: center;
-    width: 1920px;
+    top: 10px;
+    width: 100vw;
 	}
 	body{
 		margin : auto;

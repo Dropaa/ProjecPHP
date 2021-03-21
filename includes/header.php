@@ -16,7 +16,7 @@
 	}
 	.naviguation{
 		display: inline-block;
-		margin-left: 490px;
+		margin-left: 900px;
 	}
 	.naviguation a{
 		color:white;

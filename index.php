@@ -12,10 +12,10 @@
 			text-align: center;
 		}
 		.pikachu{
-			width: 50%;
-			padding : 50px;
+            padding : 50px;
+            width: 353px;
 		}
-		.bvn{
+		h1{
 			text-align: center;
 			font-weight: bold;
 			font-size: 45px;
@@ -25,15 +25,13 @@
 	</style>
 </head>
 <body>
-	<?php include('includes/header.php'); ?>
+	<?php include('includes/header.php') ?>
 	<div class="index_container">
 		<div class="img">
 			<img src="images/pikachu.png" class="pikachu">
 		</div>
-		<div class="bvn">
-			<strong>BIENVENUE SUR LE POKEDEX DE L'ESGI !</strong>
-		</div>
+			<h1><strong>BIENVENUE SUR LE POKEDEX DE L'ESGI !</strong></h1>
 	</div>
-	<?php include('includes/footer.php'); ?>
+	<?php include('includes/footer.php') ?>
 </body>
 </html>
