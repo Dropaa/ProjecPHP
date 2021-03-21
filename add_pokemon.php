@@ -21,6 +21,10 @@
     }
 
     .file{
+        font-size: 14px;
+    }
+
+    .img{
         font-size: 20px;
     }
 
@@ -68,12 +72,12 @@
 <div class="add_pokemon">
     <h1><strong>AJOUTER UN POKEMON</strong></h1>
     <form action="profile.php" role="form" method="post">
-        <input type="text" name="nom" placeholder="Nom" class="nom" required>
-        <input type="text" name="pv" placeholder="PV" class="pv" required>
-        <input type="text" name="attaque" placeholder="Attaque" class="attaque" required>
-        <input type="text" name="défense" placeholder="Défense" class="défense" required>
-        <input type="text" name="vitesse" placeholder="Vitesse" class="vitesse" required>
-        <p><strong>Image :</strong><input type="file" accept="image/png" class="file" required></p>
+        <input type="text" name="name" placeholder="Nom" class="nom" required>
+        <input type="text" name="hp" placeholder="PV" class="pv" required>
+        <input type="text" name="attack" placeholder="Attaque" class="attaque" required>
+        <input type="text" name="defense" placeholder="Défense" class="défense" required>
+        <input type="text" name="speed" placeholder="Vitesse" class="vitesse" required>
+        <p class="img"><strong>Image :</strong><input type="file" accept="image/png" class="file" required></p>
         <input type="submit" value="Ajouter" class="ajouter">
     </form>
 </div>
