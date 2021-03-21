@@ -36,10 +36,10 @@
 			<img src="images/logo.png" width="350px">
 		</div>
 		<div class="naviguation">
-			<a href="../index.php">Accueil</a>
-			<a href="../collection.php">Collection</a>
-			<a href="../add_pokemon.php">Ajouter un Pokemon</a>
-			<a href="../profile.php">Mon compte</a>
+			<a href="index.php">Accueil</a>
+			<a href="collection.php">Collection</a>
+			<a href="add_pokemon.php">Ajouter un Pokemon</a>
+			<a href="profile.php">Mon compte</a>
 			<a href="connexion_check.php">Déconnexion</a>
 		</div>
 	</div>
