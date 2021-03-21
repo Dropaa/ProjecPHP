@@ -94,15 +94,16 @@ if (isset($_FILES['image']) && !empty($_FILES['image']['name'])) {
 $q = 'INSERT INTO user (pseudo, email, password, image) values (:pseudo, :email, :password, :image)';
 $req = $db->prepare($q);
 $reponse = $req->execute([
+    'pseudo' => $_POST['nickname'],
     'email' => $_POST['email'],
     'password' => hash('sha512', $_POST['password']),
     'image' =>  isset($filename) ? $filename : ''
 ]);
 
 if ($reponse) {
-    header('location: index.php?message=Compte créé avec succès !&type=success');
+    header('location: ../index.php?message=Compte créé avec succès !');
     exit;
 } else {
-    header('location: inscription.php?message=Erreur lors de l\'inscription.&type=danger');
+    header('location: ../connexion.php?message=Erreur lors de l\'inscription.');
     exit;
 }
