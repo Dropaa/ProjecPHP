@@ -4,25 +4,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<title>Page d'accueil</title>
-	<style>
-		html{
-			font-family: Lato;
-		}
-		.img{
-			text-align: center;
-		}
-		.pikachu{
-            padding : 50px;
-            width: 353px;
-		}
-		h1{
-			text-align: center;
-			font-weight: bold;
-			font-size: 45px;
-			margin-bottom: 200px;
-		}
-
-	</style>
 </head>
 <body>
 	<?php

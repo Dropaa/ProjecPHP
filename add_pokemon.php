@@ -16,66 +16,6 @@
     include('includes/header.php');
     ?>
 
-<style>
-
-    body{
-        font-family: 'Lato', sans-serif;
-    }
-    .add_pokemon{
-        margin-left: 461px;
-        margin-right: 461px;
-        margin-top: 80px;
-        margin-bottom: 100px;
-    }
-
-    .file{
-        font-size: 14px;
-    }
-
-    .img{
-        font-size: 20px;
-    }
-
-    h1{
-        padding: 10px;
-        text-align: center;
-    }
-
-    .nom,.pv, .attaque, .défense, .vitesse, .ajouter {
-        border-radius: 4px;
-        border: 1px solid;
-        border-color: grey;
-        font-size: 20px;
-    }
-
-    .file{
-        padding-left: 5px;
-    }
-
-    ::placeholder{
-        color: #626978;
-    }
-    .nom, .pv, .attaque, .défense, .vitesse {
-        display: inline-block;
-        width: 35vw;
-        padding: 16px;
-        margin-bottom: 10px;
-    }
-    .ajouter{
-        border: hidden;
-        color: white;
-        width: 40vw;
-        padding: 16px;
-        background-color: #4CAF50;
-        font-size: 20px;
-    }
-
-    .ajouter:hover{
-        opacity: .9;
-    }
-
-</style>
-
 <body>
 <div class="add_pokemon">
     <h1><strong>AJOUTER UN POKEMON</strong></h1>

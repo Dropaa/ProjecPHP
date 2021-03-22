@@ -14,38 +14,6 @@ include('includes/header.php')
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
-<style>
-    body{
-        font-family: 'Lato', sans-serif;
-    }
-
-    .myaccountTitre{
-        text-align: center;
-        padding-top: 50px;
-    }
-
-    .infos{
-        border-bottom: 1px solid;
-        border-color: grey;
-    }
-
-    .container-account{
-        padding-left: 200px;
-        padding-right: 200px;
-
-    }
-
-    .infos{
-        padding-top: 20px;
-        padding-bottom: 100px;
-    }
-
-    .mypokemons{
-        padding-top: 20px;
-    }
-
-</style>
-
 <body>
 
 <h1 class="myaccountTitre">MON COMPTE</h1>
