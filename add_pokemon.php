@@ -51,14 +51,14 @@
     }
     .nom, .pv, .attaque, .défense, .vitesse {
         display: inline-block;
-        width: 100%;
+        width: 35vw;
         padding: 16px;
         margin-bottom: 10px;
     }
     .ajouter{
         border: hidden;
         color: white;
-        width: 103%;
+        width: 40vw;
         padding: 16px;
         background-color: #4CAF50;
         font-size: 20px;
