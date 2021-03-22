@@ -46,7 +46,7 @@ include('includes/header.php')
     <h2><strong>Mes pokemons :</strong></h2>
     <div>
         <?php
-        $q = 'SELECT * FROM pokemon WHERE id_user = :id_user';
+        $q = 'SELECT * FROM pokemon WHERE id_user = :id_user ORDER BY nom';
         $req = $db->prepare($q);
         $req->execute([
             'id_user' => $uid

@@ -20,6 +20,28 @@ include('includes/header.php')
 
 <h1 class="allpokemonTitre">TOUS LES POKEMONS</h1>
 
+<?php
+
+include ('includes/config.php');
+
+$q = 'SELECT * FROM pokemon ORDER BY nom';
+$req = $db->query($q);
+$ans = $req->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($ans as $key => $pokemon) {
+    echo '<figure>';
+    echo '<img src="uploads/' . $pokemon['image'] .'">';
+    echo '<figcaption>';
+    echo '<H4>' . $pokemon['nom'] . '</H4>';
+    echo '<p> PV:' . $pokemon['pv'] .'</p>';
+    echo '<p> Attaque:' . $pokemon['attaque'] .'</p>';
+    echo '<p> Défense:' . $pokemon['defense'] .'</p>';
+    echo '<p> Vitesse:' . $pokemon['vitesse'] .'</p>';
+    echo '</figcaption>';
+    echo '</figure>';
+}
+?>
+
 </body>
 
 <?php include('includes/footer.php') ?>
