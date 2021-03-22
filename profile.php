@@ -20,16 +20,55 @@ include('includes/header.php')
 <h1 class="myaccountTitre">MON COMPTE</h1>
 <div class="container-account">
 <div class="infos">
-    <h2><strong>Mes infos :</strong></h2>
-    <h4>Pseudo :</h4>
-    <h4>Email :</h4>
+    <?php
+    include ('includes/config.php');
+    $q = 'SELECT * FROM user WHERE email = :email';
+    $req = $db->prepare($q);
+    $req->execute([
+            'email' => $_SESSION['email']
+    ]);
 
-    <h4>Image de profil :</h4>
+    $ans = $req->fetch();
+
+    $uid = $ans['id'];
+    $pseudo = $ans['pseudo'];
+    $email = $ans['email'];
+    $image = $ans['image'];
+    ?>
+    <h2><strong>Mes infos :</strong></h2>
+    <h4>Pseudo : <?= $pseudo ?></h4>
+    <h4>Email : <?= $email ?></h4>
+
+    <h4>Image de profil : <img src="uploads/<?= $image ?>"></h4>
 </div>
 
 <div class="mypokemons">
     <h2><strong>Mes pokemons :</strong></h2>
+    <div>
+        <?php
+        $q = 'SELECT * FROM pokemon WHERE id_user = :id_user';
+        $req = $db->prepare($q);
+        $req->execute([
+            'id_user' => $uid
+        ]);
 
+        $ans = $req->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($ans as $key => $pokemon) {
+            echo '<figure>';
+            echo '<img src="uploads/' . $pokemon['image'] .'">';
+            echo '<figcaption>';
+            echo '<H4>' . $pokemon['nom'] . '</H4>';
+            echo '<p> PV:' . $pokemon['pv'] .'</p>';
+            echo '<p> Attaque:' . $pokemon['attaque'] .'</p>';
+            echo '<p> Défense:' . $pokemon['defense'] .'</p>';
+            echo '<p> Vitesse:' . $pokemon['vitesse'] .'</p>';
+            echo '</figcaption>';
+            echo '</figure>';
+        }
+        ?>
+
+    </div>
 </div>
 </div>
 
