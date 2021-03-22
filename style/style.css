@@ -27,6 +27,9 @@ body{
     padding-bottom: 25px;
 }
 
+.index_container{
+    text-align: center;
+}
 
 .nom,.pv, .attaque, .défense, .vitesse, .ajouter {
     border-radius: 4px;
@@ -133,6 +136,7 @@ h2{
 }
 
 .inscription{
+    z-index: 999;
     border: 1px solid;
     border-color: grey;
     padding-top: 0px;
@@ -144,7 +148,7 @@ h2{
 
 }
 .img{
-	text-align: left;
+	text-align: center;
     margin: 0;
 }
 .pikachu{
@@ -201,4 +205,23 @@ h2{
 }
 .navigation a:hover{
     text-decoration: underline;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color:  #AAA;
+    color: #FFF;
+    height: 75px;
+    font-size: 18px;
+    z-index: 998;
+}
+.footer p{
+    position: relative;
+    top: 10px;
+    width: 100vw;
+}
+body{
+    margin : auto;
 }

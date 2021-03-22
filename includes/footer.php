@@ -1,22 +1,3 @@
-<style>
-	.footer{
-    position: fixed;
-    bottom: 0;
-	text-align: center;	
-	background-color:  #AAA;
-	color: #FFF;
-	height: 75px;
-	font-size: 18px;
-	}
-	.footer p{
-    position: relative;
-    top: 10px;
-    width: 100vw;
-	}
-	body{
-		margin : auto;
-	}
-</style>
 
 <footer>
 	<div class="footer">
