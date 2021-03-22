@@ -242,4 +242,9 @@ figure{
 
 *{-moz-box-sizing: border-box; box-sizing: border-box;}
 
+@media screen and (max-width: 1299px) {
 
+    .pokemonCollect {
+        justify-content: space-between;
+    }
+}
