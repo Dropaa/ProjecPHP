@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($_POST['nickname']) || empty($_POST['nickname']) || !isset($_POST['email']) || empty($_POST['email'])
-    || !isset($_POST['password']) || empty($_POST['password'])) {
+    || !isset($_POST['password']) || empty($_POST['password']) || !isset($_FILES['image']) || empty($_FILES['image']['name'])) {
     header('location: ../connexion.php?message=Veuillez remplir tous les champs.&type=error&field=ins');
     exit;
 }
@@ -16,7 +16,7 @@ if (strlen($_POST['password']) < 8) {
     exit;
 }
 
-    $uppercase = preg_match('@[A-Z]@', $_POST['password']);
+$uppercase = preg_match('@[A-Z]@', $_POST['password']);
 $lowercase = preg_match('@[a-z]@', $_POST['password']);
 $number = preg_match('@[0-9]@', $_POST['password']);
 

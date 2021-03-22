@@ -27,7 +27,7 @@ $ans = $req->fetch();
 if ($ans) {
     session_start();
     $_SESSION['email'] = $_POST['email'];
-    header('location: ../index.php');
+    header('location: ../profile.php');
     exit;
 } else {
     header('location: ../connexion.php?message=Identifiants incorrects.&type=error&field=co');

@@ -10,22 +10,22 @@ if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
 if (!isset($_POST['name']) || empty($_POST['name']) || !isset($_POST['hp']) || empty($_POST['hp'])
     || !isset($_POST['attack']) || empty($_POST['attack']) || !isset($_POST['defense']) || empty($_POST['defense'])
     || !isset($_POST['speed']) || empty($_POST['speed']) || !isset($_FILES['image']) || empty($_FILES['image']['name'])) {
-    header('location: ../add_pokemon.php?message=Vous devez remplir tous les champs.');
+    header('location: ../add_pokemon.php?message=Vous devez remplir tous les champs.&type=error&dir=add');
     exit;
 }
 
 include('../includes/config.php');
 
-$q = 'SELECT * FROM pokemon WHERE name = :name';
+$q = 'SELECT * FROM pokemon WHERE nom = :nom';
 $req = $db->prepare($q);
 $req->execute([
-    'name' => $_POST['name']
+    'nom' => $_POST['name']
 ]);
 
 $ans = $req->fetch();
 
 if ($ans) {
-    header('location: ../add_pokemon.php?message=Pokémon déjà découvert !');
+    header('location: ../add_pokemon.php?message=Pokémon déjà découvert !&type=error&dir=add');
     exit;
 }
 
@@ -36,13 +36,13 @@ $acceptable = [
 ];
 
 if (!in_array($_FILES['image']['type'], $acceptable)) {
-    header('location: ../add_pokemon.php?message=Type de fichier incorrect.');
+    header('location: ../add_pokemon.php?message=Type de fichier incorrect.&type=error&dir=add');
     exit;
 }
 $maxSize = 1024 * 1024; // 1Mo
 
 if($_FILES['image']['size'] > $maxSize) {
-    header('location: ../add_pokemon.php?message=Ce fichier est trop lourd.');
+    header('location: ../add_pokemon.php?message=Ce fichier est trop lourd.&type=error&dir=add');
     exit;
 }
 
@@ -86,9 +86,9 @@ $ans = $req->execute([
 ]);
 
 if ($ans) {
-    header('location: ../add_pokemon.php?message=Pokémon ajouté avec succès !');
+    header('location: ../add_pokemon.php?message=Pokémon ajouté avec succès !&type=success&dir=add');
     exit;
 } else {
-    header('location: ../add_pokemon.php?message=Erreur lors de l\'ajout du Pokémon.');
+    header('location: ../add_pokemon.php?message=Erreur lors de l\'ajout du Pokémon.&type=error&dir=add');
     exit;
 }

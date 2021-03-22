@@ -1,4 +1,4 @@
-<!--?php include ('includes/connexion_check.php'); ?-->
+<?php include ('includes/connexion_check.php'); ?>
 
 <!DOCTYPE html>
 <html>
@@ -19,13 +19,14 @@
 <body>
 <div class="add_pokemon">
     <h1 class="titreADD"><strong>AJOUTER UN POKEMON</strong></h1>
-    <form action="profile.php" role="form" method="post">
+    <?php include ('includes/message.php'); ?>
+    <form action="verif/verif_pokemon.php." role="form" method="post" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Nom" class="nom" required>
         <input type="text" name="hp" placeholder="PV" class="pv" required>
         <input type="text" name="attack" placeholder="Attaque" class="attaque" required>
         <input type="text" name="defense" placeholder="Défense" class="défense" required>
         <input type="text" name="speed" placeholder="Vitesse" class="vitesse" required>
-        <p class="img"><strong>Image :</strong><input type="file" accept="image/png,image/jpeg,image/gif" class="file" required></p>
+        <p class="img"><strong>Image :</strong><input type="file" name="image" accept="image/png,image/jpeg,image/gif" class="file" required></p>
         <input type="submit" value="Ajouter" class="ajouter">
     </form>
 </div>

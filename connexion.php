@@ -42,7 +42,7 @@
                 include('includes/message.php');
             }
             ?>
-            <form action="verif/verif_inscription.php" role="form" method="post">
+            <form action="verif/verif_inscription.php" role="form" method="post" enctype="multipart/form-data">
 
                 <input type="text" name="nickname" placeholder="Pseudo" class="nicknameInscription" required>
                 <input type="email" name="email" placeholder="E-mail" class="emailInscription" required>

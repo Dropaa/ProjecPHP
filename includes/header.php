@@ -1,33 +1,3 @@
-<style>
-	body{
-		margin: auto;
-	}
-	.header{
-        display: flex;
-        justify-content: space-between;
-		background-color:  #AAA;
-		color: #FFF;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.logo {
-    display: inline-block;
-	}
-	.navigation{
-		align-self: center;
-	}
-	.navigation a{
-		color:white;
-		text-decoration: none;
-		font-size: 18px;
-		padding: 0.5em;
-	}
-	.navigation a:hover{
-		text-decoration: underline;
-	}
-</style>
 <header>
 	<div class="header">
 		<div class="logo">
