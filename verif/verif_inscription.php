@@ -16,7 +16,7 @@ if (strlen($_POST['password']) < 8) {
     exit;
 }
 
-$uppercase = preg_match('@[A-Z]@', $_POST['password']);
+    $uppercase = preg_match('@[A-Z]@', $_POST['password']);
 $lowercase = preg_match('@[a-z]@', $_POST['password']);
 $number = preg_match('@[0-9]@', $_POST['password']);
 

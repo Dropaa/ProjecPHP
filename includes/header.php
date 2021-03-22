@@ -3,6 +3,8 @@
 		margin: auto;
 	}
 	.header{
+        display: flex;
+        justify-content: space-between;
 		background-color:  #AAA;
 		color: #FFF;
 		padding-top: 15px;
@@ -12,35 +14,31 @@
 	}
 	.logo {
     display: inline-block;
-    height: 40px;
 	}
-	.naviguation{
-		display: inline-block;
-		margin-left: 900px;
+	.navigation{
+		align-self: center;
 	}
-	.naviguation a{
+	.navigation a{
 		color:white;
 		text-decoration: none;
 		font-size: 18px;
 		padding: 0.5em;
-		position: relative;
-		top: -20px;
 	}
-	.naviguation a:hover{
+	.navigation a:hover{
 		text-decoration: underline;
 	}
 </style>
 <header>
 	<div class="header">
 		<div class="logo">
-			<img src="images/logo.png" width="350px">
+			<img src="images/logo.png" height="40px">
 		</div>
-		<div class="naviguation">
+		<div class="navigation">
 			<a href="index.php">Accueil</a>
 			<a href="collection.php">Collection</a>
 			<a href="add_pokemon.php">Ajouter un Pokemon</a>
 			<a href="profile.php">Mon compte</a>
-			<a href="connexion_check.php">Déconnexion</a>
+			<a href="includes/connexion_check.php">Déconnexion</a>
 		</div>
 	</div>
 </header>
