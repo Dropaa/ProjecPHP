@@ -15,7 +15,7 @@
 		<div class="img">
 			<img src="images/pikachu.png" class="pikachu">
 		</div>
-			<h1><strong>BIENVENUE SUR LE POKEDEX DE L'ESGI !</strong></h1>
+			<h1 class="titreBvn"><strong>BIENVENUE SUR LE POKEDEX DE L'ESGI !</strong></h1>
 	</div>
 	<?php include('includes/footer.php') ?>
 </body>

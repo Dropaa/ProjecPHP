@@ -1,4 +1,4 @@
-<?php include ('includes/connexion_check.php'); ?>
+<!--?php include ('includes/connexion_check.php'); ?-->
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
 
 <body>
 <div class="add_pokemon">
-    <h1><strong>AJOUTER UN POKEMON</strong></h1>
+    <h1 class="titreADD"><strong>AJOUTER UN POKEMON</strong></h1>
     <form action="profile.php" role="form" method="post">
         <input type="text" name="name" placeholder="Nom" class="nom" required>
         <input type="text" name="hp" placeholder="PV" class="pv" required>

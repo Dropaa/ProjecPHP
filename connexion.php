@@ -15,7 +15,7 @@
     ?>
 
 <body>
-<h1><strong>CONNEXION</strong></h1>
+<h1 class="titreConnexion"><strong>CONNEXION</strong></h1>
     <div class="container_connexion">
 
 
@@ -30,7 +30,6 @@
 
                 <input type="email" name="email" placeholder="E-mail" class="emailConnexion" required>
                 <input type="password" name="password" placeholder="Mot de passe" class="passwordConnexion" required>
-
                 <input type="submit" value="Connexion" class="boutonConnexion">
 
             </form>
