@@ -1,8 +1,13 @@
+<?php include ('includes/connexion_check.php'); ?>
+
 <!DOCTYPE html>
 
 <html>
 
-<?php include('includes/header.php') ?>
+<?php
+$curr = 'profile';
+include('includes/header.php')
+?>
 
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">

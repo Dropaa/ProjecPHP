@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<?php include('includes/header.php') ?>
+<?php
+$curr = 'collection';
+include('includes/header.php')
+?>
 
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">

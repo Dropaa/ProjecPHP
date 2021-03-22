@@ -1,3 +1,5 @@
+<?php include ('includes/connexion_check.php'); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-    <?php include('includes/header.php') ?>
+    <?php
+    $curr = 'add_pokemon';
+    include('includes/header.php');
+    ?>
 
 <style>
 

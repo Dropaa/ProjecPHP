@@ -25,7 +25,10 @@
 	</style>
 </head>
 <body>
-	<?php include('includes/header.php') ?>
+	<?php
+    $curr = 'index';
+    include('includes/header.php')
+    ?>
 	<div class="index_container">
 		<div class="img">
 			<img src="images/pikachu.png" class="pikachu">
