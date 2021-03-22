@@ -35,16 +35,16 @@ include('includes/header.php')
     $email = $ans['email'];
     $image = $ans['image'];
     ?>
-    <h2><strong>Mes infos :</strong></h2>
+    <h2 class="titreInfos"><strong>Mes infos :</strong></h2>
     <h4>Pseudo : <?= $pseudo ?></h4>
     <h4>Email : <?= $email ?></h4>
 
-    <h4>Image de profil : <img src="uploads/<?= $image ?>"></h4>
+    <h4>Image de profil : <img src="uploads/<?= $image ?>" height="120" width="120" class="imgprofile"></h4>
 </div>
 
 <div class="mypokemons">
     <h2><strong>Mes pokemons :</strong></h2>
-    <div>
+    <div class="pokemonCollect">
         <?php
         $q = 'SELECT * FROM pokemon WHERE id_user = :id_user ORDER BY nom';
         $req = $db->prepare($q);
@@ -56,7 +56,7 @@ include('includes/header.php')
 
         foreach ($ans as $key => $pokemon) {
             echo '<figure>';
-            echo '<img src="uploads/' . $pokemon['image'] .'">';
+            echo '<img src="uploads/' . $pokemon['image'] .'" height="200" width="200">';
             echo '<figcaption>';
             echo '<H4>' . $pokemon['nom'] . '</H4>';
             echo '<p> PV:' . $pokemon['pv'] .'</p>';

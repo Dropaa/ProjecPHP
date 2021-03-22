@@ -20,7 +20,7 @@
 
 
         <div class="connexion">
-            <h2>Je possède un compte</h2>
+            <h2 class="titreCompte">Je possède un compte</h2>
             <?php
             if (isset($_GET['field']) && $_GET['field'] == 'co') {
                 include('includes/message.php');
@@ -36,7 +36,7 @@
         </div>
 
         <div class="inscription">
-            <h2>Je crée un compte</h2>
+            <h2 class="titreCompte">Je crée un compte</h2>
             <?php
             if (isset($_GET['field']) && $_GET['field'] == 'ins') {
                 include('includes/message.php');

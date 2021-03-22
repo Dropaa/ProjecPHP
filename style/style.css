@@ -1,15 +1,20 @@
 body{
-    margin: auto;
     font-family: 'Lato', sans-serif;
+    margin : auto;
 }
 .add_pokemon{
     margin-left: 10%;
     margin-right: 10%;
 }
 
+.imgprofile{
+
+}
+
 .file{
     font-size: 14px;
 }
+
 
 .img{
     font-size: 20px;
@@ -98,6 +103,10 @@ body{
 }
 
 
+.titreInfos{
+    text-align: left;
+}
+
 .boutonConnexion:hover, .boutonInscription:hover{
     opacity: .9;
 }
@@ -112,7 +121,7 @@ input{
 }
 
 
-h2, p{
+.titreCompte, p{
     padding-left: 10px;
 }
 
@@ -176,6 +185,21 @@ h2{
     padding-bottom: 100px;
 }
 
+figcaption{
+    float: left;
+    padding-right: 3vw;
+}
+
+figure{
+    margin-right: 5%;
+}
+
+.pokemonCollect{
+    display: inline-flex;
+    flex-wrap: wrap;
+
+}
+
 .mypokemons{
     padding-top: 20px;
 }
@@ -207,7 +231,6 @@ h2{
 }
 
 .footer{
-    position: fixed;
     bottom: 0;
     text-align: center;
     background-color:  #AAA;
@@ -215,27 +238,7 @@ h2{
     height: 75px;
     font-size: 18px;
 }
-.footer p{
-    position: relative;
-    top: 10px;
-    width: 100vw;
-}
 
-@media screen and (max-height: 730px) {
-    footer{
-        position: relative;
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
 
-        bottom: 0;
-        text-align: center;
-        background-color:  #AAA;
-        color: #FFF;
-        height: 75px;
-        font-size: 18px;
 
-    }
-    .footer p{
-        position: relative;
-        top: 30px;
-        width: 100vw;
-    }
-}
