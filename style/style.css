@@ -1,6 +1,7 @@
 body{
     font-family: 'Lato', sans-serif;
     margin : auto;
+    padding-bottom: 10em;
 }
 .add_pokemon{
     margin-left: 10%;
@@ -228,7 +229,9 @@ figure{
 }
 
 .footer{
+    position: fixed;
     bottom: 0;
+    width: 100%;
     text-align: center;
     background-color:  #AAA;
     color: #FFF;
