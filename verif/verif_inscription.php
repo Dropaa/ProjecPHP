@@ -2,17 +2,17 @@
 
 if (!isset($_POST['nickname']) || empty($_POST['nickname']) || !isset($_POST['email']) || empty($_POST['email'])
     || !isset($_POST['password']) || empty($_POST['password'])) {
-    header('location: ../connexion.php?message=Veuillez remplir tous les champs.');
+    header('location: ../connexion.php?message=Veuillez remplir tous les champs.&type=error&field=ins');
     exit;
 }
 
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    header('location: ../connexion.php?message=Email invalide.');
+    header('location: ../connexion.php?message=Email invalide.&type=error&field=ins');
     exit;
 }
 
 if (strlen($_POST['password']) < 8) {
-    header('location: ../connexion.php?message=Votre mot de passe doit faire au moins 8 caractères.');
+    header('location: ../connexion.php?message=Votre mot de passe doit faire au moins 8 caractères.&type=error&field=ins');
     exit;
 }
 
@@ -21,7 +21,7 @@ $lowercase = preg_match('@[a-z]@', $_POST['password']);
 $number = preg_match('@[0-9]@', $_POST['password']);
 
 if (!$uppercase || !$lowercase || !$number) {
-    header('location: ../connexion.php?message=Votre mot de passe doit au moins contenir une majuscule, une minuscule et un chiffre.');
+    header('location: ../connexion.php?message=Votre mot de passe doit au moins contenir une majuscule, une minuscule et un chiffre.&type=error&field=ins');
     exit;
 }
 
@@ -36,7 +36,7 @@ $req->execute([
 $ans = $req->fetch();
 
 if ($ans) {
-    header('location: ../connexion.php?message=Pseudo déjà utilisé.');
+    header('location: ../connexion.php?message=Pseudo déjà utilisé.&type=error&field=ins');
     exit;
 }
 
@@ -49,7 +49,7 @@ $req->execute([
 $ans = $req->fetch();
 
 if ($ans) {
-    header('location: ../connexion.php?message=Email déjà utilisé.');
+    header('location: ../connexion.php?message=Email déjà utilisé.&type=error&field=ins');
     exit;
 }
 
@@ -63,13 +63,13 @@ if (isset($_FILES['image']) && !empty($_FILES['image']['name'])) {
     ];
 
     if (!in_array($_FILES['image']['type'], $acceptable)) {
-        header('location: ../connexion.php?message=Type de fichier incorrect.');
+        header('location: ../connexion.php?message=Type de fichier incorrect.&type=error&field=ins');
         exit;
     }
     $maxSize = 1024 * 1024; // 1Mo
 
     if($_FILES['image']['size'] > $maxSize) {
-        header('location: ../connexion.php?message=Ce fichier est trop lourd.');
+        header('location: ../connexion.php?message=Ce fichier est trop lourd.&type=error&field=ins');
         exit;
     }
 
@@ -101,9 +101,9 @@ $reponse = $req->execute([
 ]);
 
 if ($reponse) {
-    header('location: ../index.php?message=Compte créé avec succès !');
+    header('location: ../connexion.php?message=Compte créé avec succès !&type=success&field=ins');
     exit;
 } else {
-    header('location: ../connexion.php?message=Erreur lors de l\'inscription.');
+    header('location: ../connexion.php?message=Erreur lors de l\'inscription.&type=error&field=ins');
     exit;
 }

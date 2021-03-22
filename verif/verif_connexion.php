@@ -5,12 +5,12 @@ if (isset($_POST['email']) && !empty($_POST['email'])) {
 }
 
 if (!isset($_POST['email']) || empty($_POST['email']) || !isset($_POST['password']) || empty($_POST['password'])) {
-    header('location: ../connexion.php?message=Vous devez remplir les 2 champs.');
+    header('location: ../connexion.php?message=Vous devez remplir les 2 champs.&type=error&field=co');
     exit;
 }
 
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    header('location: ../connexion.php?message=Email invalide.');
+    header('location: ../connexion.php?message=Email invalide.&type=error&field=co');
     exit;
 }
 
@@ -30,6 +30,6 @@ if ($ans) {
     header('location: ../index.php');
     exit;
 } else {
-    header('location: ../connexion.php?message=Identifiants incorrects.');
+    header('location: ../connexion.php?message=Identifiants incorrects.&type=error&field=co');
     exit;
 }

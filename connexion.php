@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
     <?php
@@ -104,6 +105,11 @@
 
         <div class="connexion">
             <h2>Je possède un compte</h2>
+            <?php
+            if (isset($_GET['field']) && $_GET['field'] == 'co') {
+                include('includes/message.php');
+            }
+            ?>
             <form action="verif/verif_connexion.php" role="form" method="post">
 
                 <input type="email" name="email" placeholder="E-mail" class="emailConnexion" required>
@@ -116,6 +122,11 @@
 
         <div class="inscription">
             <h2>Je crée un compte</h2>
+            <?php
+            if (isset($_GET['field']) && $_GET['field'] == 'ins') {
+                include('includes/message.php');
+            }
+            ?>
             <form action="verif/verif_inscription.php" role="form" method="post">
 
                 <input type="text" name="nickname" placeholder="Pseudo" class="nicknameInscription" required>
