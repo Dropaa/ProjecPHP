@@ -19,7 +19,7 @@ include('includes/header.php')
 <body>
 
 <h1 class="allpokemonTitre">TOUS LES POKEMONS</h1>
-
+<div class="pokemonCollect">
 <?php
 
 include ('includes/config.php');
@@ -30,7 +30,7 @@ $ans = $req->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($ans as $key => $pokemon) {
     echo '<figure>';
-    echo '<img src="uploads/' . $pokemon['image'] .'">';
+    echo '<img src="uploads/' . $pokemon['image'] .'" height="200" width="200">';
     echo '<figcaption>';
     echo '<H4>' . $pokemon['nom'] . '</H4>';
     echo '<p> PV:' . $pokemon['pv'] .'</p>';
@@ -41,6 +41,7 @@ foreach ($ans as $key => $pokemon) {
     echo '</figure>';
 }
 ?>
+</div>
 
 </body>
 

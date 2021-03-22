@@ -7,10 +7,6 @@ body{
     margin-right: 10%;
 }
 
-.imgprofile{
-
-}
-
 .file{
     font-size: 14px;
 }
@@ -84,6 +80,7 @@ body{
     justify-content: center;
 }
 
+
 .emailConnexion, .passwordConnexion, .nicknameInscription, .emailInscription, .passwordInscription, .boutonConnexion, .boutonInscription{
     display: inline-block;
     width: 91.5%;
@@ -121,7 +118,7 @@ input{
 }
 
 
-.titreCompte, p{
+.titreCompte, .profilImg{
     padding-left: 10px;
 }
 
@@ -175,8 +172,8 @@ h2{
 }
 
 .container-account{
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 12%;
+    padding-right: 12%;
 
 }
 
@@ -197,7 +194,7 @@ figure{
 .pokemonCollect{
     display: inline-flex;
     flex-wrap: wrap;
-
+    text-align:left
 }
 
 .mypokemons{

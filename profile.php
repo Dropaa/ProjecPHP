@@ -40,6 +40,7 @@ include('includes/header.php')
     <h4>Email : <?= $email ?></h4>
 
     <h4>Image de profil : <img src="uploads/<?= $image ?>" height="120" width="120" class="imgprofile"></h4>
+
 </div>
 
 <div class="mypokemons">
@@ -59,10 +60,10 @@ include('includes/header.php')
             echo '<img src="uploads/' . $pokemon['image'] .'" height="200" width="200">';
             echo '<figcaption>';
             echo '<H4>' . $pokemon['nom'] . '</H4>';
-            echo '<p> PV:' . $pokemon['pv'] .'</p>';
-            echo '<p> Attaque:' . $pokemon['attaque'] .'</p>';
-            echo '<p> Défense:' . $pokemon['defense'] .'</p>';
-            echo '<p> Vitesse:' . $pokemon['vitesse'] .'</p>';
+            echo '<p class="infoPokemon"> PV:' . $pokemon['pv'] .'</p>';
+            echo '<p class="infoPokemon"> Attaque:' . $pokemon['attaque'] .'</p>';
+            echo '<p class="infoPokemon"> Défense:' . $pokemon['defense'] .'</p>';
+            echo '<p class="infoPokemon"> Vitesse:' . $pokemon['vitesse'] .'</p>';
             echo '</figcaption>';
             echo '</figure>';
         }
